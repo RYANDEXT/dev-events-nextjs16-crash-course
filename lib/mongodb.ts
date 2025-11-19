@@ -15,12 +15,6 @@ declare global {
 // Get MongoDB URI from environment variables
 const MONGODB_URI = process.env.MONGODB_URI;
 
-if (!MONGODB_URI) {
-  throw new Error(
-    'Please define the MONGODB_URI environment variable inside .env.local'
-  );
-}
-
 // Initialize the cached connection object
 let cached: MongooseConnection = global.mongoose || {
   conn: null,
@@ -48,11 +42,17 @@ async function connectToDatabase(): Promise<typeof mongoose> {
 
   // Create new connection if no promise exists
   if (!cached.promise) {
+    // Validate the presence of the MongoDB connection string right before connecting
+    if (!MONGODB_URI) {
+      throw new Error(
+        'Please define the MONGODB_URI environment variable inside .env.local'
+      );
+    }
     const opts = {
       bufferCommands: false, // Disable buffering to fail fast on connection issues
     };
 
-    cached.promise = mongoose.connect(MONGODB_URI!, opts).then((mongoose) => {
+    cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
       return mongoose;
     });
   }

@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="73c8a4b6-eab2-429e-976f-90cf11c08e4c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/booking.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/booking.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/mongodb.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mongodb.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
